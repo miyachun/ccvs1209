@@ -17,7 +17,7 @@ def index():
         if btA=='myA':
            f1.clear()
            f2.clear()
-           Rr=random.randrange(0, 89, 1)
+           Rr=random.randint(0,89)
            f1.append(output[Rr]['name'])
            f2.append(output[Rr]['d1'])
         if btB=='myB':
