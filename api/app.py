@@ -8,7 +8,7 @@ def index():
     
     f1=[]
     f2=[]    
-    url ="https://www.desen.com.tw/sample.json"
+    url ="https://ccvs1209.vercel.app/static/sample.json"
     data = urllib.request.urlopen(url).read()
     output = json.loads(data)
     if request.method=='POST':
