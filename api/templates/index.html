@@ -13,6 +13,9 @@ img {
 .container{
     padding: 100px;
 }
+.As{
+  color: #ff0000;
+}
 </style>
 </head>
 <body>
@@ -20,17 +23,25 @@ img {
  <img src="{{ url_for('static', filename='open.png') }}" class="image" />
  <h1>新北市私立清傳高級商業學校</h1>
  <h2>-校慶活動-</h2>
- <p>請點選按鈕，隨機顯示題目。</p>
- <p>請根據題目的前後提示，說出空格內的歌詞</p>
-
+ <h3>請點選按鈕，隨機顯示題目。</h3>
+ <h3>請根據題目的前後提示，說出空格內的歌詞</h3>
+<p></p>
 <form method="post" action="">
-{% if dF1==[] %}
-<button type="submit" value="myA" name="myA" class="btn btn-primary btn-lg">請出題</button>
-{% else %}
-<button type="submit" value="myB" name="myB" class="btn btn-danger btn-lg">清除題目</button>
-題目:{{ dF1 }}
-內容:{{ dF2 }}
+<button type="submit" value="myQu" name="myQu" class="btn btn-primary btn-lg">請出題</button>
+{% if Rr01 ==111 %}
+<button type="submit" value="myAns" name="myAns" class="btn btn-primary btn-lg">看答案</button>
 {% endif %}
+<p></p>
+{% if Rr01==100 %}
+<h3 class="As">答案:{{ As }}</h3>
+{% endif %}
+
+<hr>
+{% set list1 = Qu.split('\n') %}
+{% for item in list1 %}
+<h3>{{ item }}</h3>
+{% endfor %}
+
 </form>
 </div>
 </body>
